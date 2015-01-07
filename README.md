@@ -16,6 +16,10 @@ Configuration files:
 * The database schema can be found [here](config/schema.cql)
 * The *cassandra.yaml* configuration file can be found [here](config/cassandra.yaml)
 
+The jar should be put on the home directory of *ec2-user*. It can be built using the command:
+
+    mvn package
+
 ## Writing the rows
 The issue (data loss) is present when running the application with the following startup script. The script assume that 9 out of 12 cassandra node (named slave1, …, slave9) can be accessed from the startup machine with ssh authentication keys. The other 3 nodes are called *cassandra1-2-3* and are of the same type but are not used for running the script (they are part of the same rack/datacenter).
 
