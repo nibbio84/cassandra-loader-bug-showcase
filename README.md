@@ -17,7 +17,7 @@ Configuration files:
 * The *cassandra.yaml* configuration file can be found [here](config/cassandra.yaml)
 
 ## Writing the rows
-The issue (data loss) is present when running the application with the following startup script. The script assume that 9 out of 12 cassandra node (named slave1, …, slave9) can be accessed from the startup machine with ssh authentication keys. The other 3 nodes are called *cassandra1-2-3* and are of the same type.
+The issue (data loss) is present when running the application with the following startup script. The script assume that 9 out of 12 cassandra node (named slave1, …, slave9) can be accessed from the startup machine with ssh authentication keys. The other 3 nodes are called *cassandra1-2-3* and are of the same type but are not used for running the script (they are part of the same rack/datacenter).
 
 Note that the write consistency level is set to **ALL**.
 
