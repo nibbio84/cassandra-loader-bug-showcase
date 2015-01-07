@@ -71,8 +71,8 @@ The consistency level of this phase is set to *ONE* using the following paramete
     spark.cassandra.input.consistency.level=ONE
     
 ## Results
-The loading script should write 9 million rows (when no errors are thrown by none of the 9 machines).
+The loading script should write 9 millions rows (when no errors are thrown by none of the 9 machines).
 
-The counting script returns 9 million rows only in the *Sync* mode.
+The counting script returns 9 millions rows only in the *Sync* mode.
 
-The *Async* mode returns few thousand rows less than 9 million. **Every count returns a different number**.
+The *Async* mode returns few thousand rows less than 9 millions. **Every count returns a different number**.
