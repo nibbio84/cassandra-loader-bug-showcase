@@ -67,9 +67,12 @@ The test assumes that no issues are present in this phase. This can be assumed a
     println(count)
 
 The consistency level of this phase is set to *ONE* using the following parameter on the spark-submit application (set with *\-\-conf*):
+
     spark.cassandra.input.consistency.level=ONE
     
 ## Results
 The loading script should write 9 million rows (when no errors are thrown by none of the 9 machines).
+
 The counting script returns 9 million rows only in the *Sync* mode.
+
 The *Async* mode returns few thousand rows less than 9 million. **Every count returns a different number**.
