@@ -66,7 +66,7 @@ After checking that all 9 instances have terminated with number of errors report
 
 The test assumes that no issues are present in this phase. This can be assumed as the total count is correct when the loader script is run in the *Sync* instead of the *Async* mode.
 
-    val count = sc.cassandraTable[(String, String, String)]("eng", "load_table").select("point_id", "load_type", "date").where("partition_day=? and date=?", 4, "20140101").count
+    val count = sc.cassandraTable[(String, String, String)]("eng", "load_table").select("point_id", "load_type", "date").where("clustering_day=? and date=?", 4, "20140101").count
 
     println(count)
 
