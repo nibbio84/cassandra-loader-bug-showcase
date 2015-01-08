@@ -80,3 +80,8 @@ The loading script should write 9 millions rows (when no errors are thrown by no
 The counting script returns 9 millions rows only in the *Sync* mode.
 
 The *Async* mode returns few thousand rows less than 9 millions. **Every count returns a different number**.
+
+Sample results can be:
+
+* **7.467.523** rows the first time
+* **4.549.857** rows the second time (no changes, just relaunching the spark job)
