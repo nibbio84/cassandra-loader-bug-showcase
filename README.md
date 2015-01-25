@@ -6,7 +6,7 @@ The issue has been posted on the following places for a solution:
 * https://datastax-oss.atlassian.net/browse/JAVA-604
 * http://stackoverflow.com/questions/27667228/async-writes-are-broken-in-cassandra
 
-**No solution has been found**, yet.
+After some tests, it has been found that the problem is related to a **[known issue](https://issues.apache.org/jira/browse/CASSANDRA-8429) solved in Cassandra 2.1.3**.
 
 ## Environment
 The environment used for the tests is composed of 12 Amazon EC2 instances (r3.2xlarge), each one with 3 EBS (IOP) disks. Cassandra is configured in JBOD mode on all 3 disks.
